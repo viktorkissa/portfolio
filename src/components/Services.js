@@ -1,9 +1,11 @@
 import React from "react"
-import Title from "./Title"
+
 import services from "../constants/services"
 
-const Services = () => {
-  return <section className="section bg-grey">
+import Title from "./Title"
+
+const Services = () =>
+  <section className="section bg-grey">
     <Title title='Services' />
     <div className='section-center services-center'>
       {
@@ -11,7 +13,6 @@ const Services = () => {
       }
     </div>
   </section>
-}
 
 const Service = ({id, icon, title, text}) =>
   <article className="service">

@@ -5,8 +5,8 @@ import PageLinks from "../constants/links"
 
 import logo from "../assets/logo.svg"
 
-const Navbar = () => {
-  return <nav className="navbar">
+const Navbar = () =>
+  <nav className="navbar">
     <div className="nav-center">
       <div className="nav-header">
         <img src={logo} alt="logo"/>
@@ -17,6 +17,5 @@ const Navbar = () => {
       <PageLinks styleClass="nav-links" />
     </div>
   </nav>
-}
 
 export default Navbar
