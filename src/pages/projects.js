@@ -3,13 +3,17 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import Projects from "../components/Projects"
+import SEO from "../components/SEO"
 
 const ProjectsPage = ({ data: { allStrapiProjects: { nodes: projects } } }) =>
-  <Layout>
-    <section className="projects-page">
-      <Projects projects={projects} title="all projects" />
-    </section>
-  </Layout>
+  <>
+      <SEO title="Projects" />
+      <Layout>
+          <section className="projects-page">
+              <Projects projects={projects} title="all projects" />
+          </section>
+      </Layout>
+  </>
 
 export const query = graphql`
     {
