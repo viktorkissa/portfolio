@@ -192,7 +192,6 @@ p {
   margin-top: 2rem;
   width: 15rem;
   display: flex;
-  justify-content: center;
 }
 .social-links li:last-child a {
   margin-right: 0;
@@ -503,7 +502,7 @@ Services
   transition: var(--transition);
 }
 .service-icon {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 1.5rem;
 }
 .service .underline {
@@ -513,6 +512,7 @@ Services
   transition: var(--transition);
 }
 .service p {
+    margin-bottom: 0;
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
@@ -569,6 +569,9 @@ Jobs
   cursor: pointer;
   padding: 0.25rem 0;
   line-height: 1;
+}
+.job-btn:focus {
+    outline: none;
 }
 .job-btn:hover {
   color: var(--clr-primary-5);
@@ -995,6 +998,9 @@ Contact Page
   color: var(--clr-grey-1);
   text-transform: uppercase;
   letter-spacing: var(--spacing);
+}
+textarea {
+    resize: none;
 }
 .submit-btn {
   display: block;
