@@ -1,3 +1,4 @@
+@import "https://unpkg.com/aos@2.3.1/dist/aos.css";
 /*
 =============== 
 Fonts
@@ -60,6 +61,9 @@ Global Styles
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
 }
 body {
   font-family: var(--ff-secondary);
@@ -156,9 +160,13 @@ p {
 }
 /* section */
 .section {
-  padding: 5rem 0;
+  padding: 4rem 0;
 }
-
+@media screen and (min-width: 577px) {
+  .section {
+    padding: 5rem 0;
+  }
+}
 .section-center {
   width: 90vw;
   margin: 0 auto;
@@ -192,6 +200,10 @@ p {
   margin-top: 2rem;
   width: 15rem;
   display: flex;
+  justify-content: center;
+}
+.hero-info .social-links {
+  justify-content: flex-start;
 }
 .social-links li:last-child a {
   margin-right: 0;
@@ -643,16 +655,19 @@ Projects
 */
 .projects {
   background: var(--clr-grey-10);
+  overflow: hidden;
 }
 .project {
   display: grid;
   margin-bottom: 4rem;
 }
 .project-img {
+  position: relative;
   border-top-left-radius: var(--radius);
   border-top-right-radius: var(--radius);
   height: 19rem;
   z-index: 1;
+  overflow: hidden;
 }
 .project-img::after {
   content: "";
@@ -852,6 +867,11 @@ Footer
   font-weight: normal;
   text-transform: uppercase;
 }
+@media screen and (max-width: 557px) {
+  .footer h4 {
+    padding: 0 20px;
+  }
+}
 .footer h4 span {
   color: var(--clr-primary-5);
 }
@@ -903,7 +923,12 @@ About Page
 ===============
 */
 .about-page {
-  padding: 7rem 0;
+  padding: 4rem 0;
+}
+@media (min-width: 577px) {
+  .about-page {
+    padding: 7rem 0;
+  }
 }
 .about-img {
   margin-bottom: 2rem;
@@ -1055,4 +1080,8 @@ Blog Template
   width: 15rem;
   height: 15rem;
   margin: 3rem 0;
+}
+.gatsby-image-wrapper {
+  width: 100%;
+  height: 100%;
 }

@@ -40,7 +40,7 @@ const Jobs = () => {
 
   return <section className="jobs section">
     <Title title="expierence" />
-    <div className="jobs-center">
+    <div className="jobs-center" data-aos="fade-up" data-aos-once="true">
       <div className="btn-container">
         {
           jobs.map((job, index) => (
@@ -65,7 +65,7 @@ const Jobs = () => {
         }
       </article>
     </div>
-    <Link to="/about" className="btn center-btn">more info</Link>
+    <Link to="/about" className="btn center-btn" data-aos="fade-up" data-aos-once="true">more info</Link>
   </section>
 }
 

@@ -6,20 +6,20 @@ import Footer from "./Footer"
 
 // import "../css/main.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, pathname }) => {
   const [isOpen, setIsOpen] = useState(false)
+  const withAOS = pathname === '/'
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen)
   }
 
   return <>
-    <Navbar toggleSidebar={toggleSidebar} />
+    <Navbar toggleSidebar={toggleSidebar} withAOS={withAOS} />
     <Sidebar toggleSidebar={toggleSidebar} isOpen={isOpen} />
     {children}
-    <Footer/>
+    <Footer withAOS={withAOS} />
   </>
 }
-
 
 export default Layout

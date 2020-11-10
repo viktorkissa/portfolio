@@ -5,10 +5,10 @@ import Layout from "../components/Layout"
 import Projects from "../components/Projects"
 import SEO from "../components/SEO"
 
-const ProjectsPage = ({ data: { allStrapiProjects: { nodes: projects } } }) =>
+const ProjectsPage = ({ location: { pathname }, data: { allStrapiProjects: { nodes: projects } } }) =>
   <>
       <SEO title="Projects" />
-      <Layout>
+      <Layout pathname={pathname}>
           <section className="projects-page">
               <Projects projects={projects} title="all projects" />
           </section>

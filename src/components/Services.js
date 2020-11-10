@@ -15,7 +15,7 @@ const Services = () =>
   </section>
 
 const Service = ({id, icon, title, text}) =>
-  <article className="service">
+  <article className="service" data-aos="zoom-in-up" data-aos-once="true">
     {icon}
     <h4>{title}</h4>
     <div className="underline" />

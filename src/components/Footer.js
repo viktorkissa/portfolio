@@ -1,8 +1,8 @@
 import React from "react"
 import SocialLinks from "../constants/socialLinks"
 
-const Footer = () =>
-  <footer className="footer">
+const Footer = ({withAOS}) =>
+  <footer className="footer" data-aos={withAOS ? "fade" : ""} data-aos-once="true">
     <div>
       <SocialLinks styleClass="footer-links" />
       <h4>

@@ -1,5 +1,6 @@
-import React from "react"
+import React, {useEffect} from "react"
 import { graphql } from "gatsby"
+import AOS from 'aos'
 
 import Layout from "../components/Layout"
 import Hero from "../components/Hero"
@@ -9,13 +10,19 @@ import Projects from "../components/Projects"
 // import Blogs from "../components/Blogs"
 import SEO from '../components/SEO'
 
-export default ({ data }) => {
+export default ({ location: { pathname }, data }) => {
   const {
     allStrapiProjects: { nodes: projects },
     // allStrapiBlogs: { nodes: blogs }
   } = data
 
-  return <Layout>
+  useEffect(() => {
+    AOS.init({
+      duration : 1000
+    });
+  }, [])
+
+  return <Layout pathname={pathname}>
     <SEO title="Home" description="This is our home page" />
     <Hero/>
     <Services/>

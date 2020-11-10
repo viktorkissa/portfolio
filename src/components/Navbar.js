@@ -6,15 +6,17 @@ import PageLinks from "../constants/links"
 
 import logo from "../assets/logo.svg"
 
-const Navbar = ({toggleSidebar}) =>
-  <nav className="navbar">
+const Navbar = ({toggleSidebar, withAOS}) =>
+  <nav className="navbar" data-aos={withAOS ? "fade" : ""}>
     <div className="nav-center">
-      <Link to='/' className="nav-header">
-        <img src={logo} alt="logo"/>
+      <div className="nav-header">
+        <Link to='/'>
+          <img src={logo} alt="logo"/>
+        </Link>
         <button className="toggle-btn" onClick={toggleSidebar}>
           <FaAlignRight/>
         </button>
-      </Link>
+      </div>
       <PageLinks styleClass="nav-links" />
     </div>
   </nav>

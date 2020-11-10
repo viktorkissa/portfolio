@@ -1,4 +1,4 @@
-import React from "react"
+import React  from "react"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 
@@ -6,16 +6,16 @@ import Layout from "../components/Layout"
 import Title from "../components/Title"
 import SEO from "../components/SEO"
 
-const About = ({ data: { about : { nodes }} }) => {
+const About = ({ location: { pathname }, data: { about : { nodes }} }) => {
   const { title, info, stack, image } = nodes[0]
 
-  return <Layout>
+  return <Layout pathname={pathname}>
     <SEO title="About" description="About me" />
     <section className="about-page">
       <div className="section-center about-center">
         <Image fluid={image.childImageSharp.fluid} className="about-img" />
         <article className="about-text">
-          <Title title={title} />
+          <Title title={title} withoutAOS />
           <p>{info}</p>
           <div className="about-stack">
             {
